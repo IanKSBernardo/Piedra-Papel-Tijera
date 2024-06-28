@@ -1,0 +1,208 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+/* H E A D E R */
+header h1 {
+    text-align: center;
+    background: linear-gradient(to left, #766862, #92bf9f, #e3d49c);
+    background-clip: text;
+    color: transparent;
+    font-size: 38px;
+    text-shadow: 0px 0px 20px #58b3;
+}
+
+/* I M A G E N E S */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* S E C T I O N */
+
+.juego{
+    background-color: #181818;
+    box-shadow: inset 0px 0px 17px #000;
+    border-radius: 20px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maquina{
+    background-color: #4488ee55;
+    box-shadow: inset 0px 0px 30px #000;
+    border-radius: 16px;
+    width: 47%;
+}
+
+.puntaje{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.puntaje-jugador{
+    color: #f77;
+    letter-spacing: 3px;
+}
+
+.puntaje-valor-jugador{
+    color: #f77;
+    font-size: 35px;
+}
+
+.puntaje-valor-maquina{
+    color: #48e;
+    font-size: 35px;
+}
+
+.puntaje-maquina{
+    color: #48e;
+    letter-spacing: 3px;
+}
+
+.jugador{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jugador h2{
+    color: #fff6;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.opciones{
+    display: flex;
+    justify-content: center;
+}
+
+.jugador img{
+    opacity: 50%;
+    filter: grayscale(100%);
+    transition: transform 0.2s linear, 
+                filter 0.2s linear, 
+                opacity 0.2s linear;
+    cursor: pointer;
+}
+
+.jugador img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    opacity: 100%;
+}
+
+/* F O O T E R */
+
+.creditos{
+    text-align: center;
+}
+
+.creditos p{
+    color: #fff2;
+}
+
+.creditos .redes a{
+    margin: 0 15px;
+    color: #fff9;
+    font-size: 20px;
+    transition: color 0.2s linear,
+                font-size 0.2s linear;
+}
+
+.creditos .redes a:nth-child(1):hover{
+    color: #0f6;
+    font-size: 20.5px;
+}
+
+.creditos .redes a:nth-child(2):hover{
+    color: #b5f;
+    font-size: 20.5px;
+}
+
+.creditos .redes a:nth-child(3):hover{
+    color: #07f;
+    font-size: 20.5px;
+}
+
+
+/* M E D I A   Q U E R I E S */
+
+@media (max-width: 300px){
+    .maquina{
+        width: 140px;
+    }
+
+    .puntaje{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 680px){
+    .maquina{
+        width: 40%;
+    }
+
+    .puntaje{
+        margin: 50px 0;
+    }
+
+    .jugador{
+        width: 30%;
+    }
+}
+
+@media (min-width: 800px){
+    .juego{
+        width: 60%;
+        margin: auto;
+    }
+
+    .maquina{
+        max-width: 135px;
+    }
+
+    .puntaje{
+        margin: 30px 0;
+        justify-content: center;
+    }
+
+    .puntaje span{
+        margin: 0 15px;
+    }
+
+    .jugador{
+        width: 100px;
+    }
+
+    .jugador h2{
+        margin: 0 0 10px 0;
+    }
+
+    .jugador .opciones img{
+        margin: 0px 20px;
+    }
+}
